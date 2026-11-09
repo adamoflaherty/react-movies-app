@@ -6,6 +6,7 @@ import CardContent from "@mui/material/CardContent";
 import CardMedia from "@mui/material/CardMedia";
 import CardHeader from "@mui/material/CardHeader";
 import Button from "@mui/material/Button";
+import AddToPlaylistIcon from "../cardIcons/addToPlaylist";
 import Typography from "@mui/material/Typography";
 import FavoriteIcon from "@mui/icons-material/Favorite";
 import CalendarIcon from "@mui/icons-material/CalendarTodayTwoTone";
@@ -70,11 +71,12 @@ export default function MovieCard({ movie, action }) {
           </Grid>
         </Grid>
       </CardContent>
-      <CardActions disableSpacing>
-        
-        {action(movie)}
-        
-        <Link to={`/movies/${movie.id}`}>
+     <CardActions disableSpacing>
+  {action(movie)}
+
+  <AddToPlaylistIcon movie={movie} />
+
+  <Link to={`/movies/${movie.id}`}>
           <Button variant="outlined" size="medium" color="primary">
             More Info ...
           </Button>

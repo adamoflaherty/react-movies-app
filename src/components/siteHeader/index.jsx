@@ -28,6 +28,11 @@ const SiteHeader = () => {
     { label: "Favorites", path: "/movies/favorites" },
     { label: "Upcoming", path: "/movies/upcoming" },
     { label: "Now Playing ", path: "/movies/nowplaying" },
+    { label: "Popular", path: "/movies/popular" },
+    { label: "Top Rated", path: "/movies/toprated" },
+    { label: "Playlist", path: "/playlist" },
+
+    
   ];
 
   const handleMenuSelect = (pageURL) => {
@@ -41,10 +46,10 @@ const SiteHeader = () => {
 
   return (
     <>
-      <AppBar position="fixed" color="secondary">
+      <AppBar position="fixed" color="primary">
         <Toolbar>
           <Typography variant="h4" sx={{ flexGrow: 1 }}>
-            TMDB Client
+            Adam O'Flaherty's Assignment 1
           </Typography>
           <Typography variant="h6" sx={{ flexGrow: 1 }}>
             All you ever wanted to know about Movies!

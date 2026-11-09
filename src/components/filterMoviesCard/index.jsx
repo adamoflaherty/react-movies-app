@@ -90,6 +90,24 @@ export default function FilterMoviesCard(props) {
             })}
           </Select>
         </FormControl>
+        
+<FormControl sx={{...formControl}}>
+  <InputLabel id="sort-label">Sort By</InputLabel>
+  <Select
+    labelId="sort-label"
+    id="sort-select"
+    value={props.sortFilter}
+    label="Sort By"
+    onChange={(e) => handleChange(e, "sort", e.target.value)}
+  >
+    <MenuItem value="none">Default</MenuItem>
+    <MenuItem value="highest">Highest Rated</MenuItem>
+    <MenuItem value="lowest">Lowest Rated</MenuItem>
+    <MenuItem value="newest">Newest Release</MenuItem>
+    <MenuItem value="oldest">Oldest Release</MenuItem>
+  </Select>
+</FormControl>
+
       </CardContent>
       <CardMedia
         sx={{ height: 300 }}
